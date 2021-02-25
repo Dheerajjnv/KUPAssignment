@@ -9,9 +9,6 @@ pub fn merge_sort(a: &mut Vec<f64>, b: usize, e: usize) {
 fn merge(a: &mut Vec<f64>, b: usize, m:usize, e:usize) {
     let mut left = a[b..m+1].to_vec();
     let mut right = a[m+1..e+1].to_vec();
-    left.reverse();
-    right.reverse();
-    println!("size of right: {}", right.len());
     for k in b..e + 1 {
         if left.is_empty() {
             a[k] = right.pop().unwrap();
