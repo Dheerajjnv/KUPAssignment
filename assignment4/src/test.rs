@@ -2,6 +2,7 @@
 use crate::{palindrom, hello_count};
 
 #[test]
+// Testing for duplicate character.
 fn duplicate_testing() {
     let word_hello = String::from("hello world");
     output = hello_count::repeat_finder(&word_hello);
@@ -15,6 +16,8 @@ fn duplicate_testing2() {
 }
 
 #[test]
+// Testing for checking palindrome.
+
 fn pelindrom_testing() {
     let word = String::from("aabbbbaa");
     output = palindrom::check_palindrome(&word);

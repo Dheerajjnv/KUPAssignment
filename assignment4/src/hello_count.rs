@@ -1,11 +1,11 @@
 use log::{debug, error, info, log_enabled, Level};
-//Function Checking the repeating character in a word
+// Function Checking the repeating character in a word.
 //
-//#Argument
-//word
+// #Argument
+// Gets a word as argument
 //
-//Return
-//repeating character
+// Return
+// This will give the repeating character in the word.
 pub fn repeat_finder(word: &str) -> String {
     let mut my_vec: Vec<char> = word.chars().collect();
     let mut index = 0;
