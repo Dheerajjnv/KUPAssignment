@@ -3,13 +3,13 @@ use log::{debug, error, info, log_enabled, Level};
 // Function check the palindrome condition in a word
 //
 // #Argument
-// Gets a "string" as argument
+// word-a reference argument of type str
 //
 //Return
 //This will return boolean{true,false} after checking the palindrome condition
 
 pub fn check_palindrome(word: &str) -> bool {
-    if word.len() == 0 {
+    if word.is_empty() {
         return true;
     }
     let mut end_index = word.len() - 1;
@@ -25,10 +25,10 @@ pub fn check_palindrome(word: &str) -> bool {
         start_index += 1;
         end_index -= 1;
     }
-    return true;
+    true
 }
 
-// This function create the log of "check_palindrome"
+// This function maintains the log of "check_palindrome"
 fn check_palindrome_log() {
     env_logger::init();
     if log_enabled!(Level::Info) {

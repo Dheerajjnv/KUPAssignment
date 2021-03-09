@@ -2,7 +2,7 @@ use log::{debug, error, info, log_enabled, Level};
 // Function Checking the repeating character in a word.
 //
 // #Argument
-// Gets a word as argument
+// word-a reference argument of type str.
 //
 // Return
 // This will give the repeating character in the word.
@@ -25,9 +25,10 @@ pub fn repeat_finder(word: &str) -> String {
         }
         index += 1;
     }
-    return result;
+    result
 }
 
+// This function maintains the log of "check_palindrome"
 fn repeat_finder_log() {
     env_logger::init();
     if log_enabled!(Level::Info) {

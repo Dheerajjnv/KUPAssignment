@@ -1,5 +1,5 @@
 #[cfg(test)]
-use crate::{palindrom, hello_count};
+use crate::{hello_count, palindrom};
 
 #[test]
 // Testing for duplicate character.
