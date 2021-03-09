@@ -5,7 +5,7 @@ use log::{debug, error, info, log_enabled, Level};
 // word-a reference argument of type str.
 //
 // Return
-// This will give the repeating character in the word.
+// Return the repeating character in the word.
 pub fn repeat_finder(word: &str) -> String {
     let mut my_vec: Vec<char> = word.chars().collect();
     let mut index = 0;
@@ -28,7 +28,7 @@ pub fn repeat_finder(word: &str) -> String {
     result
 }
 
-// This function maintains the log of "check_palindrome"
+// This function maintains the log of "repeate_finder"
 fn repeat_finder_log() {
     env_logger::init();
     if log_enabled!(Level::Info) {

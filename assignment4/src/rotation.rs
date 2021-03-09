@@ -3,11 +3,11 @@ use log::{debug, error, info, log_enabled, Level};
 // This function checks weather a word is the rotation of another word or not.
 //
 // #Argument
-// string1-A reference parameter of actual word.
-// string2-A reference parameter for ratated word.
+// string1-A reference parameter of type str for actual word.
+// string2-A reference parameter of type str for ratated word.
 //
 // Return
-// This will return boolean{true, false} after checking condition that whether a "string2" is the rotation of "string1" or not.
+// Return boolean{true, false} after checking condition that whether a "string2" is the rotation of "string1" or not.
 
 pub fn is_rotation(string1: &str, string2: &str) -> String {
     let mut collect_reverse_char = String::new();

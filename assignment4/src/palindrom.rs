@@ -5,8 +5,8 @@ use log::{debug, error, info, log_enabled, Level};
 // #Argument
 // word-a reference argument of type str
 //
-//Return
-//This will return boolean{true,false} after checking the palindrome condition
+// Return
+// Return boolean{true,false} after checking the palindrome condition
 
 pub fn check_palindrome(word: &str) -> bool {
     if word.is_empty() {
