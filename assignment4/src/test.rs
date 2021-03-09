@@ -9,7 +9,7 @@ fn duplicate_testing() {
     assert_eq!(output, "lo")
 }
 #[test]
-fn duplicate_testing2() {
+fn duplicate_testing_success() {
     let word_hello = String::from("dheeraj");
     output = hello_count::repeat_finder(&word_hello);
     assert_eq!(output, "e")
@@ -18,13 +18,13 @@ fn duplicate_testing2() {
 #[test]
 // Testing for checking palindrome.
 
-fn pelindrom_testing() {
+fn pelindrom_testing_success() {
     let word = String::from("aabbbbaa");
     output = palindrom::check_palindrome(&word);
     assert_eq!(output, true)
 }
 #[test]
-fn pelindrom_testing2() {
+fn pelindrom__testing_success() {
     let word = String::from("aabbbbaaaabbbbaa");
     output = palindrom::check_palindrome(&word);
     assert_eq!(output, true)
