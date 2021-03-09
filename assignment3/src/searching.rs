@@ -14,7 +14,7 @@ pub fn linearsearch(array:&[i32] ,x: i32,target: i32)
 }
 
 
-pub fn binarysearch(search:i32,end:i32,start:i32,mut array: [i32;5]) {
+pub fn binarysearch(search:i32,end:i32,start:i32, array: [i32;5]) {
     if start > end
 
     {
