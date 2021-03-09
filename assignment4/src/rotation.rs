@@ -23,7 +23,6 @@ pub fn is_rotation(string1: &str, string2: &str) -> String {
     output
 }
 
-
 // Function maintaining the log for "is_rotation"
 fn repeat_finder_log() {
     env_logger::init();
