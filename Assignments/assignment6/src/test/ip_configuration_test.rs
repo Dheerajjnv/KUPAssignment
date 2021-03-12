@@ -1,5 +1,7 @@
 #[cfg(test)]
+//Testing ip_address_classification function.
 #[test]
+//Testing class a ip configuration..
 fn class_a_success() {
     use crate::ip_configuration;
     use crate::ip_configuration::IpAddress;
@@ -9,6 +11,7 @@ fn class_a_success() {
 }
 
 #[test]
+//Testing class b ip configuration.
 fn class_b_success() {
     use crate::ip_configuration;
     use crate::ip_configuration::IpAddress;
@@ -20,6 +23,7 @@ fn class_b_success() {
 }
 
 #[test]
+//Testing class c ip configuration.
 fn class_c_success() {
     use crate::ip_configuration;
     use crate::ip_configuration::IpAddress;
@@ -30,6 +34,7 @@ fn class_c_success() {
     );
 }
 #[test]
+//Testing class d ip configuration.
 fn class_d_success() {
     use crate::ip_configuration;
     use crate::ip_configuration::IpAddress;
@@ -41,6 +46,7 @@ fn class_d_success() {
 }
 
 #[test]
+//Testing invalid ip configuration.
 fn invalid_success() {
     use crate::ip_configuration;
     use crate::ip_configuration::IpAddress;

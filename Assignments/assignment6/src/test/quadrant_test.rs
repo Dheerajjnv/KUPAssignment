@@ -1,5 +1,6 @@
 #[cfg(test)]
 #[test]
+//Testing first quadrant.
 fn first_quadrant_success() {
     use crate::quadrant;
     let points = quadrant::_Points { x: 1, y: 2 };
@@ -10,6 +11,7 @@ fn first_quadrant_success() {
     );
 }
 #[test]
+//Testing second quadrant.
 fn second_quadrant_success() {
     use crate::quadrant;
     let points = quadrant::_Points { x: -1, y: 2 };
@@ -20,6 +22,7 @@ fn second_quadrant_success() {
     );
 }
 #[test]
+//Testing third quadrant.
 fn third_quadrant_success() {
     use crate::quadrant;
     let points = quadrant::_Points { x: 1, y: -2 };
@@ -30,6 +33,7 @@ fn third_quadrant_success() {
     );
 }
 #[test]
+//Testing fourth quadrant.
 fn fourth_quadrant_success() {
     use crate::quadrant;
     let points = quadrant::_Points { x: -1, y: -2 };
