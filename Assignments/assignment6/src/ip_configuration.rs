@@ -8,7 +8,7 @@ pub enum IpAddress {
     _ClassD(String),
     _InvalidConfiguration(String),
 }
-// This Function classify the ip_configuration.
+// ip_address_classification  Function classify the ip_configuration.
 //
 // #Arguments
 // ip_address-Argument of tuple type.
