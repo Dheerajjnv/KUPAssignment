@@ -7,7 +7,6 @@ pub struct _Points {
     pub y: i32,
 }
 
-
 // Function quadrant_evaluation classify the quadrant
 //
 // # Arguments.
