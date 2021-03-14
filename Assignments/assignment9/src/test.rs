@@ -22,3 +22,30 @@ fn array_sorting_success() {
     let result = vec![1.2, 2.3, 4.3, 5.6, 6.7, 9.0];
     assert_eq!(output, result);
 }
+
+// geometric_series_success check the success of geometric_series_generator.
+#[test]
+fn geometric_series_success() {
+    use crate::geometric_series;
+    use crate::geometric_series::Iterator;
+    let mut series = geometric_series::GeometricSeries {
+        first_number: 2,
+        current_number: 1,
+        ratio: 2,
+    };
+    let output = series.geometric_series_generator();
+    assert_eq!(
+        output,
+        [6, 10, 18, 34, 66, 130, 258, 514, 1026, 2050, 4098, 8194]
+    );
+    let mut unit_series = geometric_series::GeometricSeries {
+        first_number: 1,
+        current_number: 1,
+        ratio: 2,
+    };
+    let output = unit_series.geometric_series_generator();
+    assert_eq!(
+        output,
+        [3, 5, 9, 17, 33, 65, 129, 257, 513, 1025, 2049, 4097]
+    );
+}
