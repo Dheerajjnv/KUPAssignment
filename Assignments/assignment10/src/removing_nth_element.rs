@@ -9,7 +9,7 @@
 
 pub fn _removing_nth_element(mut list: Vec<i32>, nth_value: usize) -> Vec<i32> {
     let index = nth_value;
-    if list.is_empty(){
+    if list.is_empty() {
         log::warn!("Hey input the list")
     } else if index > list.len() {
         list.push(-1_i32);

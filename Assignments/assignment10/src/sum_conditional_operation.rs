@@ -19,7 +19,7 @@ pub fn _sum_conditional(map: &HashMap<String, i32>, string: String) -> i32 {
             let age = map.get(&keys[index]);
             match age {
                 Some(age) => {
-                    total_age+= age;
+                    total_age += age;
                 }
                 None => log::error!("Data not found "),
             }
