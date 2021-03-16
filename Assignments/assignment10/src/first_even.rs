@@ -7,8 +7,8 @@
 ///  result -The first even number of list type i32.
 pub fn _first_even(list: &mut Vec<i32>) -> i32 {
     let mut result = 0;
-    let mut index =0;
-    while index<list.len() - 1 {
+    let mut index = 0;
+    while index < list.len() - 1 {
         if list[index] % 2 == 0 {
             result = list[index];
             break;
@@ -16,7 +16,7 @@ pub fn _first_even(list: &mut Vec<i32>) -> i32 {
             log::warn!("No correct input");
             result = 0
         }
-        index+=1;
+        index += 1;
     }
     result
 }

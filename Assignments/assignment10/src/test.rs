@@ -50,14 +50,6 @@ fn palindrome_check_success() {
     assert_eq!(output, true);
 }
 #[test]
-/// Testing performed to check the failure of 'palindrome_check'.
-fn palindrome_check_failure() {
-    use crate::palindrome_check;
-    let mut input = vec![1, 2, 3, 2, 4];
-    let output = palindrome_check::_palindrome_check(&mut input);
-    assert_eq!(output, false);
-}
-#[test]
 /// Testing performed to check the failure of '_duplicate_element'.
 fn crating_duplicate_success() {
     use crate::creating_duplicate;
@@ -80,9 +72,9 @@ fn sum_conditional_operation_success() {
 #[test]
 /// Testing performed to check the failure of '_delete_duplicate'.
 
-fn delete_duplicate_success(){
+fn delete_duplicate_success() {
     use crate::deleting_duplicate;
-    let mut input = vec![1,1,1,2,2,3,3,3];
+    let mut input = vec![1, 1, 1, 2, 2, 3, 3, 3];
     let output = deleting_duplicate::_delete_duplicate(&mut input);
-    assert_eq!(output, [1,2,3]);
+    assert_eq!(output, [1, 2, 3]);
 }
