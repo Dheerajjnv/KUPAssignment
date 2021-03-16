@@ -1,23 +1,31 @@
 use std::collections::HashMap;
-pub fn sum_conditional(map: &HashMap<String, i32>, str: String) -> i32 {
-    let mut sum_age = 0;
-    let mut key_set: Vec<String> = Vec::new();
+/// _sum_conditional give the sum of age with matching string.
+///
+///  #Argument
+/// map-A referenced hashmap type value contain string and number i32 .
+/// string-A string to search pattern
+///
+///  #Return
+///  total_age-The sum of age.
+pub fn _sum_conditional(map: &HashMap<String, i32>, string: String) -> i32 {
+    let mut total_age = 0;
+    let mut keys: Vec<String> = Vec::new();
     for key in map.keys() {
-        key_set.push(key.to_string());
+        keys.push(key.to_string());
     }
-    let mut counter = 0;
-    while counter < key_set.len() {
-        if key_set[counter].contains(&str.to_string()) {
-            let age = map.get(&key_set[counter]);
+    let mut index = 0;
+    while index < keys.len() {
+        if keys[index].contains(&string.to_string()) {
+            let age = map.get(&keys[index]);
             match age {
                 Some(age) => {
-                    sum_age += age;
+                    total_age+= age;
                 }
                 None => log::error!("Data not found "),
             }
         }
-        counter += 1;
+        index += 1;
     }
-    log::info!("{}",sum_age);
-    sum_age
+    log::info!("Total age is returned");
+    total_age
 }
