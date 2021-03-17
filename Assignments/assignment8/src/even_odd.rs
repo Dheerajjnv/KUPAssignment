@@ -1,4 +1,4 @@
-/// This function checks weather a no.is even or not.
+/// This function checks weather a number is even or not.
 ///
 /// #Argument
 /// number - Integer of type i32.
@@ -13,10 +13,10 @@ pub fn even_number_evaluator(number: i32) -> String {
     }
 }
 
-/// This function check weather a no.is even or not.
+/// This function examine weather a number is even or not.
 ///
 /// #Argument
-/// number - Integer of type i32
+/// number - Integer of type i32.
 ///
 ///  #Return
 ///
