@@ -1,5 +1,3 @@
-use crate::trait_operation::geometric_series::Iterator;
-
 #[cfg(test)]
 #[test]
 fn minimum_calculator_equality_success() {
@@ -41,6 +39,7 @@ fn geometric_series_success() {
         current_number: 1,
         ratio: 2,
     };
+    use crate::trait_operation::geometric_series::Iterator;
     let output = series.geometric_series_generator();
     assert_eq!(
         output,
