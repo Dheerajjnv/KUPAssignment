@@ -1,6 +1,5 @@
 use crate::generic_operation::{array_sorting, minimum};
-use crate::trait_operation::geometric_series::{Iterator,GeometricSeries};
-
+use crate::trait_operation::geometric_series::{GeometricSeries, Iterator};
 
 #[cfg(test)]
 #[test]
@@ -29,7 +28,7 @@ fn array_sorting_fraction_success() {
 }
 #[test]
 fn geometric_series_success() {
-    let mut series = GeometricSeries{
+    let mut series = GeometricSeries {
         first_number: 2,
         current_number: 1,
         ratio: 2,
@@ -42,14 +41,11 @@ fn geometric_series_success() {
 }
 #[test]
 fn geometric_series_unit_success() {
-    let mut series = GeometricSeries{
+    let mut series = GeometricSeries {
         first_number: 1,
         current_number: 0,
         ratio: 1,
     };
     let output = series.geometric_series_generator();
-    assert_eq!(
-        output,
-        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-    );
+    assert_eq!(output, [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
 }

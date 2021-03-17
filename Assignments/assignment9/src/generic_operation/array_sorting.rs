@@ -2,7 +2,7 @@
 ///
 /// #Argument
 ///
-/// array - A vector of generic type .
+/// array - A vector of generic type.
 ///
 /// #Return
 ///
