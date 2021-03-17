@@ -1,9 +1,10 @@
-// GeometricSeries-Type struct.
-//
-// #Variants
-// first_number-Type i32.
-// second_number-Type i32.
-// ratio-Type i32.
+/// GeometricSeries-Type struct.
+///
+/// #Variants
+///
+/// first_number - Type i32.
+/// second_number - Type i32.
+/// ratio - Type i32.
 
 pub struct GeometricSeries {
     pub first_number: i32,
@@ -11,19 +12,21 @@ pub struct GeometricSeries {
     pub ratio: i32,
 }
 
-// Iterator-trait type
+/// Definition of trait 'Iterator'.
 pub trait Iterator {
     fn geometric_series_generator(&mut self) -> Vec<i32>;
 }
-// Implementing trait Iterator
+/// Implementing trait 'Iterator' for GeometricSeries.
 impl Iterator for GeometricSeries {
-    // geometric_series_generator produces GP of given first value with given ratio.
-    //
-    // #Argument
-    // &mut self-Type Self.
-    //
-    // #Return
-    // store_value-A vector of type i32 having all the geometric progression.
+    /// geometric_series_generator produces GP of given first value with given ratio.
+    ///
+    /// #Argument
+    ///
+    /// &mut self - Referenced mutable variable of type Self.
+    ///
+    /// #Return
+    ///
+    /// Return a vector of type i32 having all the geometric progression.
     fn geometric_series_generator(&mut self) -> Vec<i32> {
         let mut store_value: Vec<i32> = Vec::new();
         let start = self.first_number;

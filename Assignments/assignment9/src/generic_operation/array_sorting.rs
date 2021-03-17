@@ -1,12 +1,14 @@
-// _sorting function sort the given array of type generic.
-//
-// #Argument
-// array- collection of generic type.
-//
-// #Return
-// array- sorted array of collection generic type.
+/// This function sort the given array of generic type.
+///
+/// #Argument
+///
+/// array - A vector of generic type .
+///
+/// #Return
+///
+/// Return sorted array.
 
-pub fn _sorting<T: PartialOrd + Copy>(array: &mut [T]) -> &[T] {
+pub fn sorting<T: PartialOrd + Copy>(array: &mut [T]) -> &[T] {
     let mut temp;
     let length = array.len();
     for index in 0..length {
