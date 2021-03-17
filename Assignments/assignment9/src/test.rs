@@ -50,6 +50,6 @@ fn geometric_series_unit_success() {
     let output = series.geometric_series_generator();
     assert_eq!(
         output,
-        [1,1,1,1,1,1,1,1,1,1,1,1]
+        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
     );
 }
