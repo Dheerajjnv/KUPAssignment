@@ -1,5 +1,15 @@
 use crate::recursive_operation::enum_list::List;
 use crate::recursive_operation::enum_list::List::{Cons, Nil};
+/// This function gives the third odd element.
+///
+/// #Argument
+///
+/// index_travel - index value of type integer i32.
+/// list - A List of type enum containing Box<i32> and Nil.
+///
+/// #Return
+///
+/// Return the third odd element from a give collection of element.
 pub fn third_odd_searching(index_travel: i32, list: List) -> i32 {
     match list {
         Cons(number, list) => {

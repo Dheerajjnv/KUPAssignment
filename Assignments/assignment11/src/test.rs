@@ -45,13 +45,21 @@ fn third_odd_searching_success() {
         1,
         Box::new(Cons(
             21,
-            Box::new(Cons(
-                3,
-                Box::new(Cons(
-                    4,
-                    Box::new(Cons(
-                        5,
-                        Box::new(Nil))))))),
-                    )), );
-    assert_eq!(third_odd_searching(0,  input), 3);
+            Box::new(Cons(3, Box::new(Cons(4, Box::new(Cons(5, Box::new(Nil))))))),
+        )),
+    );
+    assert_eq!(third_odd_searching(0, input), 3);
+}
+#[test]
+fn nth_number_finder_success() {
+    use crate::recursive_operation::enum_list::List::{Cons, Nil};
+    use crate::recursive_operation::nth_element::nth_element_finder;
+    let input = Cons(
+        1,
+        Box::new(Cons(
+            2,
+            Box::new(Cons(3, Box::new(Cons(4, Box::new(Cons(5, Box::new(Nil))))))),
+        )),
+    );
+    assert_eq!(nth_element_finder(3, 0, input), 4);
 }
