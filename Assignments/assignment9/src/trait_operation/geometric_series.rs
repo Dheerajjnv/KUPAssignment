@@ -35,6 +35,7 @@ impl Iterator for GeometricSeries {
             self.current_number = self.first_number + self.ratio.pow(_term as u32);
             store_value.push(self.current_number)
         }
+        log::info!("Geometric progression are stored here.");
         store_value
     }
 }

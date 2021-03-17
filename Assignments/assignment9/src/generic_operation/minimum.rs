@@ -7,7 +7,7 @@
 ///
 /// #Return
 ///
-/// Returns the minimum between two numbers.
+/// Returns the minimum between two numbers if number are not equal else 0.
 pub fn minimum_calculator<T: Ord>(first_no: T, second_no: T) -> T {
     let result: bool = first_no > second_no;
     match result {

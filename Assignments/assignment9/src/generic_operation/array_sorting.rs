@@ -6,7 +6,7 @@
 ///
 /// #Return
 ///
-/// Return sorted array.
+/// Return a generic type sorted array.
 
 pub fn sorting<T: PartialOrd + Copy>(array: &mut [T]) -> &[T] {
     let mut temp;
