@@ -6,4 +6,3 @@ pub mod generic_operation {
 pub mod trait_operation {
     pub mod geometric_series;
 }
-
