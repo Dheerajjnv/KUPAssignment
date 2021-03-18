@@ -10,7 +10,7 @@ use crate::recursive_operation::enum_list::List::{Cons, Nil};
 ///
 /// #Return
 ///
-/// Return the index nth element from a give collection of element.
+/// Return the index nth element from a given collection of element.
 pub fn nth_element_finder(index: i32, result: i32, list: List) -> i32 {
     match list {
         Cons(number, list) => {

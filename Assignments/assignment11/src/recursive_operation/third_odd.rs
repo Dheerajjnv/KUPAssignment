@@ -9,7 +9,7 @@ use crate::recursive_operation::enum_list::List::{Cons, Nil};
 ///
 /// #Return
 ///
-/// Return the third odd element from a give collection of element.
+/// Return the third odd element from a given collection of element.
 pub fn third_odd_searching(index_travel: i32, list: List) -> i32 {
     match list {
         Cons(number, list) => {

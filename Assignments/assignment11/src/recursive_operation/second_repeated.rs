@@ -10,7 +10,7 @@ use crate::recursive_operation::enum_list::List::{Cons, Nil};
 ///
 /// #Return
 ///
-/// Return the second repeating element from a give collection of element.
+/// Return the second repeating element from a given collection of element.
 pub fn second_repeated_searching(counter: i32, first_number: i32, list: List) -> i32 {
     match list {
         Cons(next_number, list) => {
