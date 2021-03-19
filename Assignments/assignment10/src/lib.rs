@@ -1,8 +1,10 @@
-mod creating_duplicate;
-mod deleting_duplicate;
-mod first_even;
-mod palindrome_check;
-mod removing_nth_element;
-mod reverse_list;
-mod sum_conditional_operation;
-mod test;
+ pub mod vector_operation {
+     pub mod creating_duplicate;
+     pub mod deleting_duplicate;
+     pub mod first_even;
+     pub mod palindrome_check;
+     pub mod removing_nth_element;
+     pub mod reverse_list;
+ }
+pub mod sum_conditional_operation;
+pub mod test;
