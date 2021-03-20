@@ -69,7 +69,7 @@ fn total_book_failure() {
     assert_eq!(output, None)
 }
 #[test]
-fn display_by_title_success(){
+fn display_by_title_success() {
     use crate::library_menu::Books;
     let books = Books {
         title: vec![
@@ -81,12 +81,13 @@ fn display_by_title_success(){
         flag: 0,
     };
     let output = books.display_by_title("winner stand alone".to_string());
-    assert_eq!(output,Ok("The book is present withe given title".to_string())
+    assert_eq!(
+        output,
+        Ok("The book is present withe given title".to_string())
     )
-
 }
 #[test]
-fn display_by_title_failure(){
+fn display_by_title_failure() {
     use crate::library_menu::Books;
     let books = Books {
         title: vec![
@@ -98,11 +99,10 @@ fn display_by_title_failure(){
         flag: 0,
     };
     let output = books.display_by_title("winner stand".to_string());
-    assert_eq!(output,Err("Hey book is not present".to_string()));
-
+    assert_eq!(output, Err("Hey book is not present".to_string()));
 }
 #[test]
-fn display_by_author_success(){
+fn display_by_author_success() {
     use crate::library_menu::Books;
     let books = Books {
         title: vec![
@@ -114,12 +114,13 @@ fn display_by_author_success(){
         flag: 0,
     };
     let output = books.display_by_author("paulo".to_string());
-    assert_eq!(output,Ok("The book is present with given author".to_string())
+    assert_eq!(
+        output,
+        Ok("The book is present with given author".to_string())
     )
-
 }
 #[test]
-fn display_by_author_failure(){
+fn display_by_author_failure() {
     use crate::library_menu::Books;
     let books = Books {
         title: vec![
@@ -131,6 +132,35 @@ fn display_by_author_failure(){
         flag: 0,
     };
     let output = books.display_by_author("Dheeraj".to_string());
-    assert_eq!(output,Err("Hey book is not present".to_string()));
-
+    assert_eq!(output, Err("Hey book is not present".to_string()));
+}
+#[test]
+fn issue_book_success() {
+    use crate::library_menu::Books;
+    let mut books = Books {
+        title: vec![
+            "winner stand alone".to_string(),
+            "The alchemist".to_string(),
+        ],
+        author: vec!["paulo".to_string(), "coelho".to_string()],
+        accession_number: vec![1, 2],
+        flag: 0,
+    };
+    let output = books.issue_books("winner stand alone".to_string());
+    assert_eq!(output, Ok("Book issued".to_string()))
+}
+#[test]
+fn issue_book_failure() {
+    use crate::library_menu::Books;
+    let mut books = Books {
+        title: vec![
+            "winner stand alone".to_string(),
+            "The alchemist".to_string(),
+        ],
+        author: vec!["paulo".to_string(), "coelho".to_string()],
+        accession_number: vec![1, 2],
+        flag: 0,
+    };
+    let output = books.issue_books("winn".to_string());
+    assert_eq!(output, Err("Hey this is not present".to_string()))
 }

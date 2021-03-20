@@ -82,16 +82,22 @@ impl Books {
         }
         for index in 0..self.title.len() {
             if reference == self.title[index] {
-                log::info!("{},{},{},{}",self.title[index],self.flag, self.accession_number[index], self.author[index] );
+                log::info!(
+                    "{},{},{},{}",
+                    self.title[index],
+                    self.flag,
+                    self.accession_number[index],
+                    self.author[index]
+                );
             }
         }
         Ok("The book is present withe given title".to_string())
     }
-    /// This function gives the information of book based on title.
+    /// This function gives the information of book based on author.
     ///
     /// #Argument
     /// &self - A referenced Self type parameter
-    /// reference - The title given of type String
+    /// reference - The author given of type String
     ///
     /// #Return
     /// The Ok type value if the book with author present in data else error message.
@@ -101,9 +107,38 @@ impl Books {
         }
         for index in 0..self.author.len() {
             if reference == self.author[index] {
-                log::info!("{},{},{},{}",self.title[index],self.flag, self.accession_number[index], self.author[index] );
+                log::info!(
+                    "{},{},{},{}",
+                    self.title[index],
+                    self.flag,
+                    self.accession_number[index],
+                    self.author[index]
+                );
             }
         }
         Ok("The book is present with given author".to_string())
+    }
+    /// This function issue the book and update the data.
+    ///
+    /// #Argument
+    /// &self - A referenced Self type parameter
+    /// title - The title  given of type String
+    ///
+    /// #Return
+    /// The Ok type value if the book with title issued in data else error message.
+    pub fn issue_books(&mut self, title: String) -> Result<String, String> {
+        if !self.title.contains(&title) {
+            Err("Hey this is not present".to_string())
+        } else {
+            for i in 0..self.title.len() - 1 {
+                if title == self.title[i] {
+                    self.title.remove(i);
+                    self.flag = 1;
+                    self.author.remove(i);
+                    self.accession_number.remove(i);
+                }
+            }
+            Ok("Book issued".to_string())
+        }
     }
 }
