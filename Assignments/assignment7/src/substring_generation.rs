@@ -16,3 +16,10 @@ pub fn sub_string_generator(word: String) -> Vec<String> {
     }
     store_substring
 }
+pub fn substring_check(word: String) -> Result<Vec<String>, String> {
+    let result = word.is_empty();
+    match result {
+        false => Ok(sub_string_generator(word)),
+        true => Err("Empty string".to_string()),
+    }
+}
