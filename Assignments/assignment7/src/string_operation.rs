@@ -1,13 +1,13 @@
-// _get_conditional_string return the output on given condition.
-//
-// #Argument.
-// first_slice-Reference variable of type str.
-// second_slice-Reference variable of type str.
-// third_slice-Reference variable of type str.
-//
-// #Return
-// output-Type string.
-pub fn _get_conditional_string(first_slice: &str, second_slice: &str, third_slice: &str) -> String {
+/// get_conditional_string return the output on given condition.
+///
+/// #Argument.
+/// first_slice-Reference variable of type str.
+/// second_slice-Reference variable of type str.
+/// third_slice-Reference variable of type str.
+///
+/// #Return
+/// output-Type string.
+pub fn get_conditional_string(first_slice: &str, second_slice: &str, third_slice: &str) -> String {
     let mut len_iter = 0;
     let mut index_value: usize = 0;
     let mut output: String = String::new();

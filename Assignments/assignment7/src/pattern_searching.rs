@@ -1,42 +1,33 @@
-// Splitting function return the vector of chars.
-//
-// #Argument
-// String- String of type &str.
-//
-// #Return
-// Store-A vector of chars.
+/// This function is used to match a given pattern with string
+///
+/// #Arguments
+///
+/// string: Type str  on which pattern is going to match.
+/// pattern:Type str which is to be matched on a input_string.
+///
+/// #Return
+///
+/// Return a result index value if found else error message.
+pub fn pattern_matching(string: &str, pattern: &str) -> Result<usize, String> {
+    let collect_string: Vec<char> = string.chars().collect();
+    let collect_pattern: Vec<char> = pattern.chars().collect();
+    let mut count = 0;
+    let mut take_index_value;
 
-pub fn splitting(string: &str) -> Vec<char> {
-    let mut store: Vec<char> = Vec::new();
-    for chars in string.chars() {
-        store.push(chars)
-    }
-    store
-}
+    for index in 0..(collect_string.len() - collect_pattern.len() + 1) {
+        take_index_value = index;
 
-// pattern_value function return the starting index of matched position.
-//
-// Return.
-// Index- match position of type usize or 0.
-
-pub fn pattern_value() -> usize {
-    let word = String::from("pankaj chaudhary");
-    let pattern = String::from("cha");
-    let first = splitting(&word);
-    let second = splitting(&pattern);
-    let mut index = 0;
-    while index <= word.len() - pattern.len() {
-        let mut pattern_index = 0;
-        while pattern_index < pattern.len() {
-            if first[index + pattern_index] != second[pattern_index] {
-                break;
+        for travel in &collect_pattern {
+            if travel == &collect_string[take_index_value] {
+                count += 1;
             }
-            pattern_index += 1;
+            if count == collect_pattern.len() {
+                return  Ok(index);
+            }
+            take_index_value += 1;
         }
-        if pattern_index == pattern.len() {
-            return index;
-        }
-        index += 1;
+        count = 0;
     }
-    0
+    log::warn!("Pattern not found");
+    Err("pattern is not present in given string".to_string())
 }

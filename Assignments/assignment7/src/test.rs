@@ -1,5 +1,5 @@
 #[test]
-// substring_generation_success Checks the success of substring generation
+/// substring_generation_success Checks the success of substring generation
 fn substring_generation_success() {
     use crate::substring_generation;
     let word = "pa".to_string();
@@ -15,23 +15,28 @@ fn substring_generation_success_secondchars() {
 }
 
 #[test]
-// pattern_value_success checks the patter_value success.
+/// pattern_value_success checks the patter_value success.
 fn pattern_value_success() {
     use crate::pattern_searching;
-    let output = pattern_searching::pattern_value();
-    assert_eq!(output, 7);
+    let output = pattern_searching::pattern_matching("Pankaj Chaudhary", "Cha");
+    assert_eq!(output.unwrap(), 7);
 }
-
 #[test]
-//string_operation_success checks get_conditional_string success
+fn pattern_value_failur() {
+    use crate::pattern_searching;
+    let output = pattern_searching::pattern_matching("Pankaj Chaudhary", "z");
+    assert_eq!(output, Err("pattern is not present in given string".to_string()));
+}
+#[test]
+///string_operation_success checks get_conditional_string success
 fn string_operation_success() {
     use crate::string_operation;
-    let output = string_operation::_get_conditional_string("jjdhid", "ikjhjk", "rtysgi");
+    let output = string_operation::get_conditional_string("jjdhid", "ikjhjk", "rtysgi");
     assert_eq!(output, "ijdhgd")
 }
 #[test]
-fn string_operation_secondry_success() {
+fn string_operation_secondary_success() {
     use crate::string_operation;
-    let output = string_operation::_get_conditional_string("abcdef", "aioeu", "ramram");
+    let output = string_operation::get_conditional_string("abcdef", "aioeu", "ramram");
     assert_eq!(output, "aacda")
 }
