@@ -25,18 +25,21 @@ fn pattern_value_success() {
 fn pattern_value_failur() {
     use crate::pattern_searching;
     let output = pattern_searching::pattern_matching("Pankaj Chaudhary", "z");
-    assert_eq!(output, Err("pattern is not present in given string".to_string()));
+    assert_eq!(
+        output,
+        Err("pattern is not present in given string".to_string())
+    );
 }
 #[test]
 ///string_operation_success checks get_conditional_string success
 fn string_operation_success() {
     use crate::string_operation;
     let output = string_operation::get_conditional_string("jjdhid", "ikjhjk", "rtysgi");
-    assert_eq!(output, "ijdhgd")
+    assert_eq!(output.unwrap(), "itdsgk")
 }
 #[test]
 fn string_operation_secondary_success() {
     use crate::string_operation;
     let output = string_operation::get_conditional_string("abcdef", "aioeu", "ramram");
-    assert_eq!(output, "aacda")
+    assert_eq!(output.unwrap(), "aicra")
 }

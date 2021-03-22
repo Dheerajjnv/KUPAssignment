@@ -6,62 +6,51 @@
 /// third_slice-Reference variable of type str.
 ///
 /// #Return
-/// output-Type string.
-pub fn get_conditional_string(first_slice: &str, second_slice: &str, third_slice: &str) -> String {
-    let mut len_iter = 0;
-    let mut index_value: usize = 0;
-    let mut output: String = String::new();
-    let mut _first_compare = 0;
-    if len_iter % 2 == 0 {
-        _first_compare = 0
-    } else {
-        _first_compare = 1
-    };
-    while index_value < first_slice.len()
-        && index_value < second_slice.len()
-        && index_value < second_slice.len()
-    {
-        match _first_compare {
-            0 => {
-                let comp_res_str1_str2 = if first_slice.chars().nth(index_value)
-                    < second_slice.chars().nth(index_value)
-                {
-                    first_slice.chars().nth(index_value)
-                } else {
-                    second_slice.chars().nth(index_value)
-                };
-                let res_char = if comp_res_str1_str2 < third_slice.chars().nth(index_value) {
-                    comp_res_str1_str2
-                } else {
-                    third_slice.chars().nth(index_value)
-                };
-                if let Some(_t) = res_char {
-                    output.push(res_char.unwrap())
-                }
-            }
+/// Return the output of option type string having desired condition.
+pub fn get_conditional_string(
+    first_slice: &str,
+    second_slice: &str,
+    third_slice: &str,
+) -> Option<String> {
+    let mut position = 0;
+    let mut travel_index: usize = 0;
+    let mut array: Vec<char> = Vec::new();
 
-            1 => {
-                let comp_res_str1_str2 = if first_slice.chars().nth(index_value)
-                    < second_slice.chars().nth(index_value)
-                {
-                    second_slice.chars().nth(index_value)
+    while travel_index < second_slice.len() {
+        if position % 2 == 0 {
+            let compare_result =
+                if first_slice.chars().nth(travel_index) < second_slice.chars().nth(travel_index) {
+                    first_slice.chars().nth(travel_index)
                 } else {
-                    first_slice.chars().nth(index_value)
+                    second_slice.chars().nth(travel_index)
                 };
-                let result = if comp_res_str1_str2 > third_slice.chars().nth(index_value) {
-                    comp_res_str1_str2
-                } else {
-                    third_slice.chars().nth(index_value)
-                };
-                if let Some(_t) = result {
-                    output.push(result.unwrap())
-                }
+            let result_char = if compare_result < third_slice.chars().nth(travel_index) {
+                compare_result
+            } else {
+                third_slice.chars().nth(travel_index)
+            };
+            if let Some(_t) = result_char {
+                array.push(result_char.unwrap());
             }
-            _ => {}
+        } else {
+            let compare_result =
+                if first_slice.chars().nth(travel_index) > second_slice.chars().nth(travel_index) {
+                    first_slice.chars().nth(travel_index)
+                } else {
+                    second_slice.chars().nth(travel_index)
+                };
+            let result_char = if compare_result > third_slice.chars().nth(travel_index) {
+                compare_result
+            } else {
+                third_slice.chars().nth(travel_index)
+            };
+            if let Some(_t) = result_char {
+                array.push(result_char.unwrap());
+            }
         }
-
-        index_value += 1;
-        len_iter += 1;
+        travel_index += 1;
+        position += 1
     }
-    output
+    let result: String = array.iter().collect();
+    Some(result)
 }

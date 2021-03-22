@@ -22,7 +22,7 @@ pub fn pattern_matching(string: &str, pattern: &str) -> Result<usize, String> {
                 count += 1;
             }
             if count == collect_pattern.len() {
-                return  Ok(index);
+                return Ok(index);
             }
             take_index_value += 1;
         }
