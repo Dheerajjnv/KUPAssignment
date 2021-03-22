@@ -7,11 +7,14 @@
 ///
 /// #Return
 ///
-/// Returns the minimum between two numbers if number are not equal else 0.
-pub fn minimum_calculator<T: Ord>(first_no: T, second_no: T) -> T {
-    let result: bool = first_no > second_no;
-    match result {
-        true => second_no,
-        false => first_no,
+/// Returns the minimum between two numbers if number are not equal else error message.
+pub fn minimum_result<T: std::cmp::PartialOrd>(first_no: T, second_no: T) -> Result<T, String> {
+    if first_no < second_no {
+        Ok(first_no)
+    } else if first_no > second_no {
+        Ok(second_no)
+    } else {
+        log::error!("Error for comparing 2 value");
+        Err("Hey both numbers are equal".to_string())
     }
 }

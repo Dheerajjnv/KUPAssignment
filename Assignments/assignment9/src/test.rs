@@ -2,14 +2,14 @@
 #[test]
 fn minimum_calculator_equality_success() {
     use crate::generic_operation;
-    let output = generic_operation::minimum::minimum_calculator(45, 45);
-    assert_eq!(output, 45);
+    let output = generic_operation::minimum::minimum_result(45, 45);
+    assert_eq!(output, Err("Hey both numbers are equal".to_string()))
 }
 
 #[test]
 fn minimum_calculator_inequality_success() {
     use crate::generic_operation;
-    let output = generic_operation::minimum::minimum_calculator(45, 26);
+    let output = generic_operation::minimum::minimum_result(45, 26).unwrap();
     assert_eq!(output, 26);
 }
 
