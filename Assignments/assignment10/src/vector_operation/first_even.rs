@@ -5,7 +5,7 @@
 ///
 ///  #Return
 ///  result -The first even number of list type i32.
-pub fn first_even(list: &mut Vec<i32>) -> i32 {
+pub fn first_even(list: &mut Vec<i32>) -> Option<i32> {
     let mut result = 0;
     let mut index = 0;
     while index < list.len() - 1 {
@@ -18,5 +18,5 @@ pub fn first_even(list: &mut Vec<i32>) -> i32 {
         }
         index += 1;
     }
-    result
+    Some(result)
 }
