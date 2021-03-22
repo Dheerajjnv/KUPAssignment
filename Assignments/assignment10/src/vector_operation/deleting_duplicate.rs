@@ -6,7 +6,7 @@
 ///  #Return
 ///  store-A vector of i32 after removing all the duplicate value.
 
-pub fn _delete_duplicate(list: &mut Vec<i32>) -> Vec<i32> {
+pub fn delete_duplicate(list: &mut Vec<i32>) -> Vec<i32> {
     let length = list.len();
     let mut store: Vec<i32> = Vec::new();
     for index in 0..list.len() - 1 {

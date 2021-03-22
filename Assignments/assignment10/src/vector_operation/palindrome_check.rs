@@ -5,7 +5,7 @@
 ///
 /// #Return
 /// result-Type boolean{true, false}
-pub fn _palindrome_check(list: &mut Vec<i32>) -> bool {
+pub fn palindrome_check(list: &mut Vec<i32>) -> bool {
     let mid = list.len() / 2;
     let mut front = 0;
     let mut back = list.len() - 1;

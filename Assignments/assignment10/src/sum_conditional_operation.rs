@@ -7,7 +7,7 @@ use std::collections::HashMap;
 ///
 ///  #Return
 ///  total_age-The sum of age.
-pub fn _sum_conditional(map: &HashMap<String, i32>, string: String) -> i32 {
+pub fn sum_conditional(map: &HashMap<String, i32>, string: String) -> i32 {
     let mut total_age = 0;
     let mut keys: Vec<String> = Vec::new();
     for key in map.keys() {

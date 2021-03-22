@@ -7,7 +7,7 @@
 ///  #Return
 /// 'list' ofter removing the nth position value or 'list' ending with -1 for beyond index case.
 
-pub fn _removing_nth_element(mut list: Vec<i32>, nth_value: usize) -> Vec<i32> {
+pub fn removing_nth_element(mut list: Vec<i32>, nth_value: usize) -> Vec<i32> {
     let index = nth_value;
     if list.is_empty() {
         log::warn!("Hey input the list")

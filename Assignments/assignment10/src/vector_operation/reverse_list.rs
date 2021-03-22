@@ -5,7 +5,7 @@
 ///
 /// #Return
 /// list-Reverse the list of element type vector i32.
-pub fn _reverse_list(mut list: Vec<i32>) -> Vec<i32> {
+pub fn reverse_list(mut list: Vec<i32>) -> Vec<i32> {
     let mut start_index = 0;
     let mut end_index = list.len() - 1;
     while start_index < end_index {
