@@ -1,4 +1,4 @@
-/// duplicate_lelement create the duplicate of each element present in the list.
+/// duplicate_element create the duplicate of each element present in the list.
 ///
 ///  #Argument
 /// list-A reference type mutable vector of i32.
